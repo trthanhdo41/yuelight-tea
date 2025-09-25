@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Test - Yuelight Tea</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans bg-gray-100 p-8">
+    <div class="max-w-2xl mx-auto">
+        <h1 class="text-3xl font-bold text-center mb-8">🧪 Quick Test</h1>
+        
+        <!-- Test Add to Cart -->
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Test Add to Cart</h2>
+            <div class="flex items-center justify-between">
+                <div>
+                    <h3 class="font-semibold">Long Jing Tea</h3>
+                    <p class="text-red-600 font-bold">89,000₫</p>
+                </div>
+                <button onclick="addToCart(this)" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded">
+                    Thêm vào giỏ
+                </button>
+            </div>
+        </div>
+        
+        <!-- Cart Status -->
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Cart Status</h2>
+            <p>Cart Count: <span id="cart-count">0</span></p>
+            <button onclick="testCart()" class="mt-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
+                Test Cart
+            </button>
+        </div>
+        
+        <!-- Navigation -->
+        <div class="text-center">
+            <a href="cart.html" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg mr-4">
+                View Cart
+            </a>
+            <a href="demo.html" class="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg">
+                Demo Page
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="cart-functions.js"></script>
+    <script>
+        function testCart() {
+            const cartItems = JSON.parse(localStorage.getItem('yuelight_cart')) || [];
+            console.log('Cart items:', cartItems);
+            alert(`Cart has ${cartItems.length} items`);
+        }
+        
+        // Update cart count on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+        });
+    </script>
+</body>
+</html>

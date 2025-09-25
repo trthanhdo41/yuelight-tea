@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Cart - Yuelight Tea</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-inter bg-gradient-to-br from-red-50 to-amber-50 min-h-screen p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold text-red-800 mb-8 text-center">🧪 Test Cart Functions</h1>
+        
+        <!-- Header with cart count -->
+        <div class="bg-white rounded-lg shadow-lg p-4 mb-8">
+            <div class="flex justify-between items-center">
+                <h2 class="text-xl font-semibold">Header Test</h2>
+                <a href="cart.html" class="text-red-600 hover:text-red-700">
+                    <i class="fas fa-shopping-cart mr-2"></i>Cart (<span id="cart-count">0</span>)
+                </a>
+            </div>
+        </div>
+        
+        <!-- Test Products -->
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-lg font-semibold mb-2">Long Jing Tea</h3>
+                <p class="text-red-600 font-bold mb-4">89,000₫</p>
+                <button onclick="addToCart(this)" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-300">
+                    Thêm vào giỏ
+                </button>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-lg font-semibold mb-2">Latte Art Hoa Mai</h3>
+                <p class="text-red-600 font-bold mb-4">89,000₫</p>
+                <button onclick="addToCart(this)" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-300">
+                    Thêm vào giỏ
+                </button>
+            </div>
+        </div>
+        
+        <!-- Cart Status -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-xl font-semibold mb-4">Cart Status</h2>
+            <div id="cart-status" class="text-gray-600">
+                Loading...
+            </div>
+        </div>
+        
+        <!-- Actions -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-xl font-semibold mb-4">Actions</h2>
+            <div class="space-y-4">
+                <button onclick="testAddItems()" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
+                    Test Add Multiple Items
+                </button>
+                <button onclick="clearCart()" class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
+                    Clear Cart
+                </button>
+                <button onclick="updateCartStatus()" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
+                    Refresh Status
+                </button>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <div class="mt-8 text-center">
+            <a href="cart.html" class="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 mr-4">
+                <i class="fas fa-shopping-cart mr-2"></i>View Cart
+            </a>
+            <a href="demo.html" class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+                <i class="fas fa-play mr-2"></i>Demo Page
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="cart-functions.js"></script>
+    <script>
+        function testAddItems() {
+            // Add test items directly
+            let cartItems = JSON.parse(localStorage.getItem('yuelight_cart')) || [];
+            
+            const testItems = [
+                { id: 1, name: 'Long Jing Tea', price: 89000, quantity: 2, image: 'img/photo-1585870531763-dad72a085631.jpeg' },
+                { id: 2, name: 'Latte Art Hoa Mai', price: 89000, quantity: 1, image: 'img/gastebereich-mit-bar-1216-1200x630-crop-1.jpg' },
+                { id: 3, name: 'Combo Cung Nữ', price: 299000, quantity: 1, image: 'img/z7048830571734_f3cfb14da69910ce71294f2d86aae573.jpg' }
+            ];
+            
+            cartItems = testItems;
+            localStorage.setItem('yuelight_cart', JSON.stringify(cartItems));
+            
+            updateCartCount();
+            updateCartStatus();
+            showNotification('Test items added to cart!', 'success');
+        }
+        
+        function clearCart() {
+            localStorage.removeItem('yuelight_cart');
+            updateCartCount();
+            updateCartStatus();
+            showNotification('Cart cleared!', 'info');
+        }
+        
+        function updateCartStatus() {
+            const cartItems = JSON.parse(localStorage.getItem('yuelight_cart')) || [];
+            const statusDiv = document.getElementById('cart-status');
+            
+            if (cartItems.length === 0) {
+                statusDiv.innerHTML = '<p class="text-gray-500">Cart is empty</p>';
+            } else {
+                const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+                const totalPrice = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                
+                statusDiv.innerHTML = `
+                    <p class="text-green-600 font-semibold">Cart has ${totalItems} items</p>
+                    <p class="text-gray-600">Total: ${totalPrice.toLocaleString()}₫</p>
+                    <div class="mt-4 space-y-2">
+                        ${cartItems.map(item => `
+                            <div class="flex justify-between items-center p-2 bg-gray-50 rounded">
+                                <span>${item.name} x${item.quantity}</span>
+                                <span class="font-semibold">${(item.price * item.quantity).toLocaleString()}₫</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+        }
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartStatus();
+        });
+    </script>
+</body>
+</html>

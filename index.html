@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuelight Tea - Quán cà phê cổ trang Trung Hoa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'coffee': {
+                            50: '#fdf8f6',
+                            100: '#f2e8e5',
+                            200: '#eaddd7',
+                            300: '#e0cdc2',
+                            400: '#d2bab0',
+                            500: '#bfa094',
+                            600: '#a18072',
+                            700: '#977669',
+                            800: '#846358',
+                            900: '#43302b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-white">
+    <!-- Header Include -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen bg-gradient-to-br from-red-900 via-red-800 to-red-900 overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-20 left-20 w-32 h-32 bg-yellow-400 rounded-full blur-xl"></div>
+            <div class="absolute bottom-20 right-20 w-40 h-40 bg-amber-400 rounded-full blur-xl"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-yellow-300 rounded-full blur-2xl"></div>
+        </div>
+        
+        <div class="relative z-10 container mx-auto px-4 py-20">
+            <div class="grid lg:grid-cols-2 gap-16 items-center min-h-screen">
+                <!-- Left Content -->
+                <div class="text-center lg:text-left space-y-8">
+                    <!-- Logo -->
+                    <div class="flex items-center justify-center lg:justify-start space-x-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full flex items-center justify-center shadow-2xl">
+                            <i class="fas fa-leaf text-3xl text-red-800"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-6xl lg:text-7xl font-black text-white tracking-wider">
+                                月光明茶
+                            </h1>
+                            <h2 class="text-4xl lg:text-5xl font-bold text-yellow-400 tracking-wider">
+                                YUELIGHT TEA
+                            </h2>
+                        </div>
+                    </div>
+                    
+                    <!-- Description -->
+                    <div class="space-y-6">
+                        <p class="text-2xl lg:text-3xl font-bold text-white">
+                            Quán cà phê cổ trang Trung Hoa
+                        </p>
+                        <p class="text-lg lg:text-xl text-gray-200 leading-relaxed">
+                            Trải nghiệm văn hóa cổ điển với trà đạo, trang phục truyền thống 
+                            và không gian cung đình độc đáo
+                        </p>
+                    </div>
+                    
+                    <!-- Opening Hours -->
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
+                        <div class="text-center">
+                            <h3 class="text-2xl font-bold text-yellow-400 mb-4">🕐 GIỜ MỞ CỬA</h3>
+                            <p class="text-4xl font-black text-white mb-2">07:00 - 21:00</p>
+                            <p class="text-lg text-gray-200">Hàng ngày</p>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="shop.html" class="bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-red-900 px-10 py-4 rounded-full font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                            🍵 Khám phá menu
+                        </a>
+                        <a href="location.html" class="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-red-900 px-10 py-4 rounded-full font-bold text-xl transition-all duration-300">
+                            🏮 Trải nghiệm cổ trang
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Images -->
+                <div class="space-y-8">
+                    <!-- Top Image -->
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-yellow-400 to-amber-400 rounded-3xl blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+                        <div class="relative bg-white p-3 rounded-2xl shadow-2xl">
+                            <img src="img/hero-image-1.jpg" alt="Không gian quán" 
+                                 class="w-full h-64 object-cover rounded-xl">
+                            <div class="absolute bottom-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full text-sm font-bold">
+                                Không gian cung đình
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bottom Image -->
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-amber-400 to-yellow-400 rounded-3xl blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+                        <div class="relative bg-white p-3 rounded-2xl shadow-2xl">
+                            <img src="img/hero-image-2.jpg" alt="Không gian quán" 
+                                 class="w-full h-64 object-cover rounded-xl">
+                            <div class="absolute bottom-4 left-4 bg-yellow-600 text-white px-4 py-2 rounded-full text-sm font-bold">
+                                Trà đạo truyền thống
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="py-20 bg-gradient-to-r from-red-800 to-red-900">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl lg:text-5xl font-black text-white mb-8 tracking-wider">
+                    月光明茶 - YUELIGHT TEA
+                </h2>
+                <p class="text-xl lg:text-2xl text-gray-200 leading-relaxed">
+                    Quán cà phê cổ trang Trung Hoa mang đến trải nghiệm văn hóa độc đáo, 
+                    kết hợp giữa cà phê hiện đại và trà truyền thống trong không gian cung đình tinh tế.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="relative py-20 overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="img/z7048830571734_f3cfb14da69910ce71294f2d86aae573.jpg" alt="Không gian cổ trang" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        </div>
+        
+        <div class="relative z-10 container mx-auto px-4">
+            <div class="flex justify-end">
+                <div class="max-w-lg bg-white bg-opacity-95 backdrop-blur-sm p-8 rounded-2xl shadow-2xl">
+                    <h2 class="text-3xl font-bold text-red-800 mb-6">Trải nghiệm văn hóa</h2>
+                    <p class="text-gray-700 leading-relaxed mb-8">
+                        Với phong cách cung đình Trung Hoa, quán có mái cong, cột gỗ, và sân vườn nhỏ. 
+                        Khách hàng có thể trải nghiệm trang phục cổ trang, thưởng thức đồ uống và món ăn đặc trưng, 
+                        đồng thời tham gia các workshop văn hóa như trà đạo và thư pháp.
+                    </p>
+                    <button class="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        Tìm hiểu thêm
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-gradient-to-br from-red-50 to-orange-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black text-red-800 mb-4 tracking-wider">
+                    DỊCH VỤ ĐẶC BIỆT
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-red-500 to-orange-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Trang phục cổ trang -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden">
+                        <img src="img/costume-rental.jpg" alt="Trang phục cổ trang" 
+                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-red-800 mb-4">Thuê trang phục cổ trang</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Trải nghiệm trang phục cung đình Trung Hoa cổ đại, từ áo dài tay rộng đến váy xếp ly, 
+                            tạo nên những bức ảnh "sống ảo" đầy ấn tượng trong không gian cung đình.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Workshop văn hóa -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden">
+                        <img src="img/workshop.jpg" alt="Workshop văn hóa" 
+                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-red-800 mb-4">Workshop văn hóa</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Tham gia các lớp học trà đạo, thư pháp và nghệ thuật cung đình. 
+                            Học cách pha trà truyền thống và viết chữ Hán đẹp mắt dưới sự hướng dẫn của chuyên gia.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Pour Over -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden">
+                        <img src="img/palace-interior.jpg" alt="Không gian cung đình" 
+                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-red-800 mb-4">Không gian cung đình</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Thiết kế theo phong cách cung đình Trung Hoa với mái cong, cột gỗ, sân vườn nhỏ. 
+                            Không gian lý tưởng để thư giãn, chụp ảnh và tận hưởng văn hóa cổ đại.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="py-20 bg-gradient-to-br from-red-800 to-red-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl lg:text-5xl font-black text-white mb-8 tracking-wider">
+                MENU ĐẶC BIỆT
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">TRÀ</h3>
+                    <p class="text-gray-200">Trà truyền thống Trung Hoa với hương vị tinh tế</p>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">CÀ PHÊ</h3>
+                    <p class="text-gray-200">Cà phê hiện đại kết hợp với văn hóa cổ đại</p>
+                </div>
+            </div>
+            <a href="shop.html" class="inline-block bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-black px-12 py-4 rounded-full font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Xem Menu
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Include -->
+    <div id="footer-placeholder"></div>
+
+    <script src="include.js"></script>
+    <script src="script.js"></script>
+    <script src="cart-functions.js"></script>
+</body>
+</html>
+

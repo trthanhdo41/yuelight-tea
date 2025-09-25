@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Yuelight Tea</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'coffee': {
+                            50: '#fdf8f6',
+                            100: '#f2e8e5',
+                            200: '#eaddd7',
+                            300: '#e0cdc2',
+                            400: '#d2bab0',
+                            500: '#bfa094',
+                            600: '#a18072',
+                            700: '#977669',
+                            800: '#846358',
+                            900: '#43302b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-white">
+    <!-- Header Include -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 bg-gradient-to-br from-red-800 via-red-700 to-red-900 overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-yellow-400 rounded-full blur-xl"></div>
+            <div class="absolute bottom-10 right-10 w-40 h-40 bg-amber-400 rounded-full blur-xl"></div>
+        </div>
+        
+        <div class="relative z-10 container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl lg:text-6xl font-black text-white mb-6 tracking-wider">
+                    月光明茶 <span class="text-yellow-400">YUELIGHT TEA</span>
+                </h1>
+                <p class="text-2xl text-gray-200 mb-8">Menu Trà & Cà phê Cổ trang</p>
+                <div class="w-32 h-1 bg-gradient-to-r from-yellow-400 to-amber-500 mx-auto rounded-full"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tea Section -->
+    <section class="py-20 bg-gradient-to-br from-amber-50 to-yellow-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black text-red-800 mb-4 tracking-wider">
+                    🍵 TRÀ TRUYỀN THỐNG
+                </h2>
+                <p class="text-xl text-gray-700">Trà đạo Trung Hoa cổ điển</p>
+                <div class="w-24 h-1 bg-gradient-to-r from-red-500 to-red-600 mx-auto rounded-full mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Long Jing Tea -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden">
+                        <img src="https://mms.img.susercontent.com/vn-11134513-7r98o-lsu2kpnxjlj836@resize_ss1242x600!@crop_w1242_h600_cT" alt="Long Jing Tea" 
+                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            HOT
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-red-800 mb-2">Long Jing Tea</h3>
+                        <p class="text-gray-600 text-sm mb-2">龙井茶 - Trà Long Tỉnh</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.9) • 324 ly đã bán</span>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Trà xanh cao cấp từ Hàng Châu, hương vị tinh tế, thanh mát như sương mai.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-red-600">89,000₫</span>
+                        <button onclick="addToCart(this)" class="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-6 py-2 rounded-full font-bold transition-all duration-300 transform hover:scale-105">
+                            Thêm vào giỏ
+                        </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pu-erh Tea -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden">
+                        <img src="https://haiphonglogistics.com/wp-content/uploads/2025/01/TRA-TQ-1024x683.jpeg" alt="Pu-erh Tea" 
+                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            BEST
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-red-800 mb-2">Pu-erh Tea</h3>
+                        <p class="text-gray-600 text-sm mb-2">普洱茶 - Trà Phổ Nhĩ</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.8) • 287 ly đã bán</span>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Trà lên men đặc biệt, hương vị đậm đà, hậu vị ngọt ngào kéo dài.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-red-600">129,000₫</span>
+                        <button onclick="addToCart(this)" class="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-6 py-2 rounded-full font-bold transition-all duration-300 transform hover:scale-105">
+                            Thêm vào giỏ
+                        </button>
+                        </div>
+        </div>
+    </div>
+
+                <!-- Jasmine Tea -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden">
+                        <img src="https://vitas.org.vn/wp-content/uploads/2021/08/thuong-thuc-tra-dao-trung-quoc-1.jpg" alt="Jasmine Tea" 
+                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text--800 mb-2">Jasmine Tea</h3>
+                        <p class="text-gray-600 text-sm mb-2"></p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.9) • 312 ly đã bán</span>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Trà xanh ướp hoa nhài, hương thơm ngọt ngào, vị thanh mát.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-red-600">79,000₫</span>
+                        <button onclick="addToCart(this)" class="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-6 py-2 rounded-full font-bold transition-all duration-300 transform hover:scale-105">
+                            Thêm vào giỏ
+                        </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oolong Tea -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden">
+                        <img src="https://riba.vn/wp-content/uploads/2020/12/z4113040848134_d294e00691fe38c73f3778b22c7af12b-1.jpg" alt="Oolong Tea" 
+                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text--800 mb-2">Oolong Tea</h3>
+                        <p class="text-gray-600 text-sm mb-2"></p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.7) • 298 ly đã bán</span>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Trà bán lên men, hương vị cân bằng giữa trà xanh và trà đen.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-red-600">99,000₫</span>
+                        <button onclick="addToCart(this)" class="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-6 py-2 rounded-full font-bold transition-all duration-300 transform hover:scale-105">
+                            Thêm vào giỏ
+                        </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chrysanthemum Tea -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden">
+                        <img src="https://ruouxachtay.com/wp-content/uploads/2024/03/MilkOolongTeaChinateapot_1200x1200.webp" alt="Chrysanthemum Tea" 
+                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text--800 mb-2">Chrysanthemum Tea</h3>
+                        <p class="text-gray-600 text-sm mb-2"></p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.8) • 276 ly đã bán</span>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Trà hoa cúc thanh nhiệt, giải độc, hương vị nhẹ nhàng, dễ uống.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-red-600">69,000₫</span>
+                        <button onclick="addToCart(this)" class="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-6 py-2 rounded-full font-bold transition-all duration-300 transform hover:scale-105">
+                            Thêm vào giỏ
+                        </button>
+                        </div>
+                    </div>
+        </div>
+
+                <!-- Rose Tea -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden">
+                        <img src="https://vitas.org.vn/wp-content/uploads/2021/08/tra-dao-trung-hoa-anh-huong-den-phong-cach-song.jpg" alt="Rose Tea" 
+                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text--800 mb-2">Rose Tea</h3>
+                        <p class="text-gray-600 text-sm mb-2"></p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.6) • 234 ly đã bán</span>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Trà hoa hồng thơm ngát, vị ngọt tự nhiên, tốt cho sức khỏe.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-red-600">89,000₫</span>
+                        <button onclick="addToCart(this)" class="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-6 py-2 rounded-full font-bold transition-all duration-300 transform hover:scale-105">
+                            Thêm vào giỏ
+                        </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coffee Section -->
+    <section class="py-20 bg-gradient-to-br from-coffee-50 to-amber-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black text-coffee-800 mb-4 tracking-wider">
+                    ☕ CÀ PHÊ HIỆN ĐẠI
+                </h2>
+                <p class="text-xl text-gray-700">Cà phê phong cách cổ trang</p>
+                <div class="w-24 h-1 bg-gradient-to-r from-coffee-500 to-coffee-600 mx-auto rounded-full mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Espresso -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden">
+                        <img src="https://classiccoffee.com.vn/upload/WvyfQ0jb3ZuuJVqqfkZ2tEsnAAYmyNZvjyL.jpg" alt="Espresso" 
+                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            NEW
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text--800 mb-2">Espresso Cổ trang</h3>
+                        <p class="text-gray-600 text-sm mb-2"></p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.8) • 189 ly đã bán</span>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Espresso đậm đà, hương vị tinh tế, phục vụ trong ấm trà cổ điển.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-coffee-600">59,000₫</span>
+                            <button class="bg-gradient-to-r from-coffee-500 to-coffee-600 hover:from-coffee-600 hover:to-coffee-700 text-white px-6 py-2 rounded-full font-bold transition-all duration-300 transform hover:scale-105">
+                                Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Latte Art -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden">
+                        <img src="https://cubes-asia.com/storage/blogs/2024-09/cac-loai-do-uong-trong-quan-ca-phe-duoc-khach.jpg" alt="Latte Art" 
+                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            ART
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text--800 mb-2">Latte Art Hoa Mai</h3>
+                        <p class="text-gray-600 text-sm mb-2"></p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.9) • 267 ly đã bán</span>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Latte mềm mại với nghệ thuật vẽ hoa mai truyền thống Trung Hoa.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-coffee-600">89,000₫</span>
+                            <button class="bg-gradient-to-r from-coffee-500 to-coffee-600 hover:from-coffee-600 hover:to-coffee-700 text-white px-6 py-2 rounded-full font-bold transition-all duration-300 transform hover:scale-105">
+                                Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cappuccino -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden">
+                        <img src="https://tuart.net/wp-content/uploads/2019/11/quan-cafe-ngon-view-dep-dang-van-ngu-6-819x1024.jpg" alt="Cappuccino" 
+                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text--800 mb-2">Cappuccino Cung đình</h3>
+                        <p class="text-gray-600 text-sm mb-2"></p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.7) • 198 ly đã bán</span>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Cappuccino mềm mại, thêm chút hương vani và quế, phục vụ trong chén sứ cổ.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-coffee-600">79,000₫</span>
+                            <button class="bg-gradient-to-r from-coffee-500 to-coffee-600 hover:from-coffee-600 hover:to-coffee-700 text-white px-6 py-2 rounded-full font-bold transition-all duration-300 transform hover:scale-105">
+                                Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mocha -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden">
+                        <img src="https://cafefcdn.com/203337114487263232/2022/8/31/photo-12-16619296007151380422454.jpg" alt="Mocha" 
+                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text--800 mb-2">Mocha Hồng Trà</h3>
+                        <p class="text-gray-600 text-sm mb-2"></p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.8) • 156 ly đã bán</span>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Mocha đặc biệt với hương hồng trà, tạo nên hương vị độc đáo.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-coffee-600">99,000₫</span>
+                            <button class="bg-gradient-to-r from-coffee-500 to-coffee-600 hover:from-coffee-600 hover:to-coffee-700 text-white px-6 py-2 rounded-full font-bold transition-all duration-300 transform hover:scale-105">
+                                Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cold Brew -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden">
+                        <img src="https://vietblend.vn/wp-content/uploads/2016/09/d7b9c56594b872e62ba9.jpg" alt="Cold Brew" 
+                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text--800 mb-2">Cold Brew Trà Ô Long</h3>
+                        <p class="text-gray-600 text-sm mb-2"></p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.6) • 143 ly đã bán</span>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Cold brew mát lạnh, kết hợp với trà ô long, hương vị tươi mới.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-coffee-600">89,000₫</span>
+                            <button class="bg-gradient-to-r from-coffee-500 to-coffee-600 hover:from-coffee-600 hover:to-coffee-700 text-white px-6 py-2 rounded-full font-bold transition-all duration-300 transform hover:scale-105">
+                                Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Affogato -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden">
+                        <img src="https://spicyfoodstudio.com/wp-content/uploads/2023/03/chup-anh-do-uong-09.jpeg" alt="Affogato" 
+                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text--800 mb-2">Affogato Hoa Nhài</h3>
+                        <p class="text-gray-600 text-sm mb-2"></p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.9) • 178 ly đã bán</span>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Affogato đặc biệt với kem tươi và hương hoa nhài, món tráng miệng hoàn hảo.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-coffee-600">119,000₫</span>
+                            <button class="bg-gradient-to-r from-coffee-500 to-coffee-600 hover:from-coffee-600 hover:to-coffee-700 text-white px-6 py-2 rounded-full font-bold transition-all duration-300 transform hover:scale-105">
+                                Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Combo Section -->
+    <section class="py-20 bg-gradient-to-r from-red-800 to-red-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black text-white mb-4 tracking-wider">
+                    🎭 COMBO ĐẶC BIỆT
+                </h2>
+                <p class="text-xl text-gray-200">Trải nghiệm hoàn hảo với trang phục cổ trang</p>
+                <div class="w-24 h-1 bg-gradient-to-r from-yellow-400 to-amber-500 mx-auto rounded-full mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Combo 1 -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
+                    <div class="text-center mb-6">
+                        <h3 class="text-3xl font-bold text-white mb-2">Combo Cung Nữ</h3>
+                        <p class="text-yellow-400 text-lg">Trang phục + Trà + Bánh ngọt</p>
+                        <div class="flex items-center justify-center mb-4">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-300">(4.9) • 156 combo đã bán</span>
+                        </div>
+                    </div>
+                    <div class="space-y-3 mb-6 flex flex-col items-center">
+                        <div class="flex items-center text-white">
+                            <i class="fas fa-check-circle text-yellow-400 mr-3 text-lg"></i>
+                            <span>Thuê trang phục cung nữ (2 giờ)</span>
+                        </div>
+                        <div class="flex items-center text-white">
+                            <i class="fas fa-check-circle text-yellow-400 mr-3 text-lg"></i>
+                            <span>Trà Long Tỉnh cao cấp</span>
+                        </div>
+                        <div class="flex items-center text-white">
+                            <i class="fas fa-check-circle text-yellow-400 mr-3 text-lg"></i>
+                            <span>Bánh ngọt Trung Hoa</span>
+                        </div>
+                        <div class="flex items-center text-white">
+                            <i class="fas fa-check-circle text-yellow-400 mr-3 text-lg"></i>
+                            <span>Chụp ảnh miễn phí</span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-4xl font-bold text-yellow-400">299,000₫</span>
+                        <p class="text-gray-300 text-sm mt-2">Tiết kiệm 50,000₫</p>
+                        <button onclick="addToCart(this)" class="mt-4 bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-red-900 px-8 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105">
+                            Đặt ngay
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Combo 2 -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
+                    <div class="text-center mb-6">
+                        <h3 class="text-3xl font-bold text-white mb-2">Combo Hoàng Đế</h3>
+                        <p class="text-yellow-400 text-lg">Trang phục + Cà phê + Workshop</p>
+                        <div class="flex items-center justify-center mb-4">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-300">(4.8) • 98 combo đã bán</span>
+                        </div>
+                    </div>
+                    <div class="space-y-3 mb-6 flex flex-col items-center">
+                        <div class="flex items-center text-white">
+                            <i class="fas fa-check-circle text-yellow-400 mr-3 text-lg"></i>
+                            <span>Thuê trang phục hoàng đế (3 giờ)</span>
+                        </div>
+                        <div class="flex items-center text-white">
+                            <i class="fas fa-check-circle text-yellow-400 mr-3 text-lg"></i>
+                            <span>Cà phê đặc biệt + Latte Art</span>
+                        </div>
+                        <div class="flex items-center text-white">
+                            <i class="fas fa-check-circle text-yellow-400 mr-3 text-lg"></i>
+                            <span>Workshop thư pháp (30 phút)</span>
+                        </div>
+                        <div class="flex items-center text-white">
+                            <i class="fas fa-check-circle text-yellow-400 mr-3 text-lg"></i>
+                            <span>Chụp ảnh chuyên nghiệp</span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-4xl font-bold text-yellow-400">499,000₫</span>
+                        <p class="text-gray-300 text-sm mt-2">Tiết kiệm 100,000₫</p>
+                        <button onclick="addToCart(this)" class="mt-4 bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-red-900 px-8 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105">
+                            Đặt ngay
+                            </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Include -->
+    <div id="footer-placeholder"></div>
+
+    <script src="include.js"></script>
+    <script src="script.js"></script>
+    <script src="cart-functions.js"></script>
+</body>
+</html>

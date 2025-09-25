@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - Yuelight Tea</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'coffee': {
+                            50: '#fdf8f6',
+                            100: '#f2e8e5',
+                            200: '#eaddd7',
+                            300: '#e0cdc2',
+                            400: '#d2bab0',
+                            500: '#bfa094',
+                            600: '#a18072',
+                            700: '#977669',
+                            800: '#846358',
+                            900: '#43302b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-gradient-to-br from-red-50 to-amber-50 min-h-screen">
+    <!-- Top Banner -->
+    <div class="bg-gradient-to-r from-yellow-400 to-yellow-500 py-2 text-center">
+        <div class="container mx-auto px-4">
+            <span class="text-sm font-semibold text-gray-800">🏮 Trải nghiệm văn hóa Trung Hoa cổ điển</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-coffee-800 to-coffee-900 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">Trang chủ</a>
+                    <a href="shop.html" class="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">Menu</a>
+                    <a href="about.html" class="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">Về chúng tôi</a>
+                    <a href="location.html" class="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">Địa điểm & Giờ mở cửa</a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="login.html" class="text-white hover:text-yellow-400 transition-colors duration-300">
+                        <i class="fas fa-user mr-2"></i>Log In
+                    </a>
+                    <a href="cart.html" class="text-white hover:text-yellow-400 transition-colors duration-300">
+                        <i class="fas fa-shopping-cart mr-2"></i>Cart (0)
+                    </a>
+                    <a href="booking.html" class="bg-black hover:bg-gray-800 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                        Đặt chỗ
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <!-- Header -->
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl lg:text-5xl font-black text-red-800 mb-4 tracking-wider">
+                        📞 Liên hệ với chúng tôi
+                    </h1>
+                    <p class="text-xl text-gray-600">Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn</p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Gửi tin nhắn cho chúng tôi</h2>
+                        
+                        <form class="space-y-6">
+                            <!-- Personal Information -->
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                        <i class="fas fa-user mr-2 text-red-500"></i>Họ và tên *
+                                    </label>
+                                    <input type="text" placeholder="Nhập họ và tên" required
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                        <i class="fas fa-phone mr-2 text-red-500"></i>Số điện thoại *
+                                    </label>
+                                    <input type="tel" placeholder="Nhập số điện thoại" required
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                    <i class="fas fa-envelope mr-2 text-red-500"></i>Email *
+                                </label>
+                                <input type="email" placeholder="Nhập email" required
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300">
+                            </div>
+
+                            <!-- Subject -->
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                    <i class="fas fa-tag mr-2 text-red-500"></i>Chủ đề *
+                                </label>
+                                <select required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300">
+                                    <option value="">Chọn chủ đề</option>
+                                    <option value="booking">Đặt chỗ</option>
+                                    <option value="costume">Thuê trang phục</option>
+                                    <option value="workshop">Workshop</option>
+                                    <option value="feedback">Góp ý</option>
+                                    <option value="complaint">Khiếu nại</option>
+                                    <option value="other">Khác</option>
+                                </select>
+                            </div>
+
+                            <!-- Message -->
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                    <i class="fas fa-comment mr-2 text-red-500"></i>Tin nhắn *
+                                </label>
+                                <textarea placeholder="Nhập tin nhắn của bạn" rows="5" required
+                                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300"></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                                <i class="fas fa-paper-plane mr-2"></i>Gửi tin nhắn
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="space-y-6">
+                        <!-- Main Contact Info -->
+                        <div class="bg-white rounded-2xl shadow-lg p-8">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-6">Thông tin liên hệ</h2>
+                            
+                            <div class="space-y-6">
+                                <!-- Address -->
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-map-marker-alt text-red-600"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-800 mb-1">Địa chỉ</h3>
+                                        <p class="text-gray-600">334/33 Nguyễn Văn Linh<br>Quận 7, TP.HCM</p>
+                                    </div>
+                                </div>
+
+                                <!-- Phone -->
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-phone text-red-600"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-800 mb-1">Điện thoại</h3>
+                                        <p class="text-gray-600">0909.123.456</p>
+                                        <p class="text-sm text-gray-500">Hotline: 24/7</p>
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-envelope text-red-600"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-800 mb-1">Email</h3>
+                                        <p class="text-gray-600">yuelighttea@gmail.com</p>
+                                        <p class="text-sm text-gray-500">Phản hồi trong 24h</p>
+                                    </div>
+                                </div>
+
+                                <!-- Hours -->
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-clock text-red-600"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-800 mb-1">Giờ mở cửa</h3>
+                                        <p class="text-gray-600">07:00 - 21:00</p>
+                                        <p class="text-sm text-gray-500">Hàng ngày</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div class="bg-white rounded-2xl shadow-lg p-8">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-6">Mạng xã hội</h2>
+                            
+                            <div class="grid grid-cols-2 gap-4">
+                                <a href="#" class="flex items-center space-x-3 p-4 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors duration-300">
+                                    <i class="fab fa-facebook-f text-blue-600 text-xl"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-800">Facebook</p>
+                                        <p class="text-sm text-gray-600">@yuelighttea</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="flex items-center space-x-3 p-4 bg-pink-50 hover:bg-pink-100 rounded-lg transition-colors duration-300">
+                                    <i class="fab fa-instagram text-pink-600 text-xl"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-800">Instagram</p>
+                                        <p class="text-sm text-gray-600">@yuelighttea</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="flex items-center space-x-3 p-4 bg-black hover:bg-gray-800 rounded-lg transition-colors duration-300">
+                                    <i class="fab fa-tiktok text-white text-xl"></i>
+                                    <div>
+                                        <p class="font-semibold text-white">TikTok</p>
+                                        <p class="text-sm text-gray-300">@yuelighttea</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="flex items-center space-x-3 p-4 bg-red-50 hover:bg-red-100 rounded-lg transition-colors duration-300">
+                                    <i class="fab fa-youtube text-red-600 text-xl"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-800">YouTube</p>
+                                        <p class="text-sm text-gray-600">Yuelight Tea</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Quick Actions -->
+                        <div class="bg-white rounded-2xl shadow-lg p-8">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-6">Thao tác nhanh</h2>
+                            
+                            <div class="space-y-4">
+                                <a href="booking.html" class="flex items-center space-x-3 p-4 bg-red-50 hover:bg-red-100 rounded-lg transition-colors duration-300">
+                                    <i class="fas fa-calendar-check text-red-600 text-xl"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-800">Đặt chỗ ngay</p>
+                                        <p class="text-sm text-gray-600">Đặt bàn và thuê trang phục</p>
+                                    </div>
+                                </a>
+                                <a href="shop.html" class="flex items-center space-x-3 p-4 bg-yellow-50 hover:bg-yellow-100 rounded-lg transition-colors duration-300">
+                                    <i class="fas fa-shopping-bag text-yellow-600 text-xl"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-800">Xem menu</p>
+                                        <p class="text-sm text-gray-600">Trà và cà phê cổ trang</p>
+                                    </div>
+                                </a>
+                                <a href="about.html" class="flex items-center space-x-3 p-4 bg-green-50 hover:bg-green-100 rounded-lg transition-colors duration-300">
+                                    <i class="fas fa-info-circle text-green-600 text-xl"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-800">Về chúng tôi</p>
+                                        <p class="text-sm text-gray-600">Dịch vụ và đội ngũ</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map Section -->
+                <div class="mt-16">
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Vị trí của chúng tôi</h2>
+                        
+                        <!-- Map Placeholder -->
+                        <div class="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-map-marked-alt text-6xl text-gray-400 mb-4"></i>
+                                <p class="text-xl text-gray-600 font-semibold">Bản đồ Google Maps</p>
+                                <p class="text-gray-500">334/33 Nguyễn Văn Linh, Quận 7, TP.HCM</p>
+                                <button class="mt-4 bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
+                                    <i class="fas fa-directions mr-2"></i>Chỉ đường
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="mt-16">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Câu hỏi thường gặp</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- FAQ Item 1 -->
+                        <div class="bg-white rounded-xl shadow-lg p-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">Làm thế nào để đặt chỗ?</h3>
+                            <p class="text-gray-600">Bạn có thể đặt chỗ qua website, gọi điện thoại hoặc đến trực tiếp quán. Chúng tôi khuyến khích đặt chỗ trước để đảm bảo có chỗ.</p>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="bg-white rounded-xl shadow-lg p-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">Có thể thuê trang phục bao lâu?</h3>
+                            <p class="text-gray-600">Thời gian thuê trang phục từ 2-6 giờ. Bạn có thể gia hạn thêm nếu cần thiết, phí gia hạn là 50,000₫/giờ.</p>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="bg-white rounded-xl shadow-lg p-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">Workshop có cần đăng ký trước không?</h3>
+                            <p class="text-gray-600">Có, bạn cần đăng ký trước ít nhất 1 ngày để chúng tôi chuẩn bị dụng cụ và đảm bảo chất lượng workshop.</p>
+                        </div>
+
+                        <!-- FAQ Item 4 -->
+                        <div class="bg-white rounded-xl shadow-lg p-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">Có hỗ trợ chụp ảnh không?</h3>
+                            <p class="text-gray-600">Có, chúng tôi cung cấp dịch vụ chụp ảnh chuyên nghiệp với trang phục cổ trang. Bạn có thể đặt lịch chụp ảnh riêng.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative bg-gradient-to-br from-gray-900 via-red-900 to-gray-900 py-20 overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"60\" height=\"60\" viewBox=\"0 0 60 60\"><g fill=\"none\" fill-rule=\"evenodd\"><g fill=\"%23ffffff\" fill-opacity=\"0.1\"><circle cx=\"30\" cy=\"30\" r=\"2\"/></g></svg>');"></div>
+        </div>
+        
+        <div class="relative z-10 container mx-auto px-4">
+            <!-- Main Footer Content -->
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-12 mb-16">
+                <!-- Brand Column -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center shadow-lg">
+                            <i class="fas fa-leaf text-xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-white">Yuelight Tea</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        Quán cà phê cổ trang Trung Hoa mang đến trải nghiệm văn hóa độc đáo, 
+                        kết hợp giữa cà phê hiện đại và trà truyền thống.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-red-600 hover:bg-red-500 rounded-full flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-red-600 hover:bg-red-500 rounded-full flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-red-600 hover:bg-red-500 rounded-full flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-red-600 hover:bg-red-500 rounded-full flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contact Column -->
+                <div>
+                    <h4 class="text-xl font-bold text-yellow-400 mb-6 flex items-center">
+                        <i class="fas fa-map-marker-alt mr-3"></i>
+                        Liên hệ
+                    </h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-red-400 mt-1"></i>
+                            <p class="text-gray-300">334/33 Nguyễn Văn Linh<br>Quận 7, TP.HCM</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-red-400"></i>
+                            <p class="text-gray-300">0909.123.456</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-red-400"></i>
+                            <p class="text-gray-300">yuelighttea@gmail.com</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-clock text-red-400"></i>
+                            <p class="text-gray-300">07:00 - 21:00 (Hàng ngày)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Services Column -->
+                <div>
+                    <h4 class="text-xl font-bold text-yellow-400 mb-6 flex items-center">
+                        <i class="fas fa-star mr-3"></i>
+                        Dịch vụ
+                    </h4>
+                    <div class="space-y-3">
+                        <a href="#" class="block text-gray-300 hover:text-yellow-400 transition-colors duration-300">Thuê trang phục cổ trang</a>
+                        <a href="#" class="block text-gray-300 hover:text-yellow-400 transition-colors duration-300">Workshop trà đạo</a>
+                        <a href="#" class="block text-gray-300 hover:text-yellow-400 transition-colors duration-300">Lớp học thư pháp</a>
+                        <a href="#" class="block text-gray-300 hover:text-yellow-400 transition-colors duration-300">Không gian cung đình</a>
+                        <a href="#" class="block text-gray-300 hover:text-yellow-400 transition-colors duration-300">Chụp ảnh cổ trang</a>
+                    </div>
+                </div>
+                
+                <!-- Newsletter Column -->
+                <div>
+                    <h4 class="text-xl font-bold text-yellow-400 mb-6 flex items-center">
+                        <i class="fas fa-bell mr-3"></i>
+                        Nhận tin tức
+                    </h4>
+                    <p class="text-gray-300 mb-4">Đăng ký để nhận thông tin về sự kiện và ưu đãi đặc biệt</p>
+                    <form class="space-y-3">
+                        <input type="email" placeholder="Email của bạn" 
+                               class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300">
+                        <button type="submit" onclick="handleNewsletter(event)" class="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white py-3 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            Đăng ký ngay
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <div class="flex items-center space-x-6">
+                        <p class="text-gray-400">&copy; 2024 Yuelight Tea. All rights reserved.</p>
+                        <div class="hidden md:flex space-x-6">
+                            <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors duration-300">Chính sách bảo mật</a>
+                            <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors duration-300">Điều khoản sử dụng</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-2 text-gray-400">
+                        <span>Made with</span>
+                        <i class="fas fa-heart text-red-500"></i>
+                        <span>in Vietnam</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="cart-functions.js"></script>
+</body>
+</html>

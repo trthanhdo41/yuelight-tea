@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Địa điểm & Giờ mở cửa - Yuelight Tea</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'coffee': {
+                            50: '#fdf8f6',
+                            100: '#f2e8e5',
+                            200: '#eaddd7',
+                            300: '#e0cdc2',
+                            400: '#d2bab0',
+                            500: '#bfa094',
+                            600: '#a18072',
+                            700: '#977669',
+                            800: '#846358',
+                            900: '#43302b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-white">
+    <!-- Header Include -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 bg-gradient-to-br from-red-800 via-red-700 to-red-900 overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-yellow-400 rounded-full blur-xl"></div>
+            <div class="absolute bottom-10 right-10 w-40 h-40 bg-amber-400 rounded-full blur-xl"></div>
+        </div>
+        
+        <div class="relative z-10 container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl lg:text-6xl font-black text-white mb-6 tracking-wider">
+                    月光明茶 <span class="text-yellow-400">YUELIGHT TEA</span>
+                </h1>
+                <p class="text-2xl text-gray-200 mb-8">Địa điểm & Giờ mở cửa</p>
+                <div class="w-32 h-1 bg-gradient-to-r from-yellow-400 to-amber-500 mx-auto rounded-full"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="py-20 bg-gradient-to-br from-amber-50 to-yellow-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-4xl lg:text-5xl font-black text-red-800 mb-6 tracking-wider">
+                            Vị trí của chúng tôi
+                        </h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center shadow-lg">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-red-800 mb-2">Địa chỉ chính</h3>
+                                    <p class="text-gray-700 text-lg">334/33 Nguyễn Văn Linh, Quận 7, TP.HCM</p>
+                                    <p class="text-gray-600">Tọa lạc tại trung tâm Quận 7, dễ dàng tiếp cận</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center shadow-lg">
+                                    <i class="fas fa-car text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-red-800 mb-2">Bãi đỗ xe</h3>
+                                    <p class="text-gray-700 text-lg">Miễn phí cho khách hàng</p>
+                                    <p class="text-gray-600">Có sẵn 20 chỗ đỗ xe trong khuôn viên</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center shadow-lg">
+                                    <i class="fas fa-bus text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-red-800 mb-2">Giao thông công cộng</h3>
+                                    <p class="text-gray-700 text-lg">Xe buýt: Tuyến 20, 34, 54</p>
+                                    <p class="text-gray-600">Metro: Ga Nguyễn Văn Linh (5 phút đi bộ)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative">
+                        <!-- Google Maps -->
+                        <div class="rounded-2xl shadow-2xl overflow-hidden">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9328828908133!2d106.7214783!3d10.7396563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f80ce95b213%3A0xa7c3ec42f502945b!2zMzM0IMSQxrDhu51uZyBOZ3V54buFbiBWxINuIExpbmgsIELDrG5oIFRodeG6rW4sIFF14bqtbiA3LCBI4buTIENow60gTWluaA!5e0!3m2!1sen!2s!4v1758789538054!5m2!1sen!2s" 
+                                    width="100%" 
+                                    height="450" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    class="w-full h-96 lg:h-[450px]">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours Section -->
+    <section class="py-20 bg-gradient-to-br from-red-50 to-orange-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black text-red-800 mb-4 tracking-wider">
+                    Giờ mở cửa
+                </h2>
+                <p class="text-xl text-gray-700">Thời gian phục vụ của chúng tôi</p>
+                <div class="w-24 h-1 bg-gradient-to-r from-red-500 to-orange-500 mx-auto rounded-full mt-4"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Regular Hours -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-clock text-2xl text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-red-800">Giờ mở cửa thường</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                                <span class="font-semibold text-gray-700">Thứ 2 - Thứ 6</span>
+                                <span class="text-red-600 font-bold">07:00 - 21:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                                <span class="font-semibold text-gray-700">Thứ 7</span>
+                                <span class="text-red-600 font-bold">07:00 - 22:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                                <span class="font-semibold text-gray-700">Chủ nhật</span>
+                                <span class="text-red-600 font-bold">08:00 - 21:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Special Services -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-star text-2xl text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-red-800">Dịch vụ đặc biệt</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                                <span class="font-semibold text-gray-700">Thuê trang phục</span>
+                                <span class="text-red-600 font-bold">09:00 - 20:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                                <span class="font-semibold text-gray-700">Workshop trà đạo</span>
+                                <span class="text-red-600 font-bold">14:00 - 16:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                                <span class="font-semibold text-gray-700">Lớp thư pháp</span>
+                                <span class="text-red-600 font-bold">15:00 - 17:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3">
+                                <span class="font-semibold text-gray-700">Chụp ảnh cổ trang</span>
+                                <span class="text-red-600 font-bold">10:00 - 19:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-gradient-to-br from-coffee-50 to-amber-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black text-coffee-800 mb-4 tracking-wider">
+                    Liên hệ với chúng tôi
+                </h2>
+                <p class="text-xl text-gray-700">Chúng tôi luôn sẵn sàng phục vụ bạn</p>
+                <div class="w-24 h-1 bg-gradient-to-r from-coffee-500 to-coffee-600 mx-auto rounded-full mt-4"></div>
+            </div>
+            
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Phone -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 text-center group hover:shadow-2xl transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-phone text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-coffee-800 mb-4">Điện thoại</h3>
+                        <p class="text-gray-600 mb-4">Gọi ngay để đặt bàn hoặc tư vấn</p>
+                        <a href="tel:0909123456" class="text-red-600 font-bold text-lg hover:text-red-700 transition-colors duration-300">
+                            0909.123.456
+                        </a>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 text-center group hover:shadow-2xl transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-envelope text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-coffee-800 mb-4">Email</h3>
+                        <p class="text-gray-600 mb-4">Gửi email cho chúng tôi</p>
+                        <a href="mailto:yuelighttea@gmail.com" class="text-red-600 font-bold text-lg hover:text-red-700 transition-colors duration-300">
+                            yuelighttea@gmail.com
+                        </a>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 text-center group hover:shadow-2xl transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-share-alt text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-coffee-800 mb-4">Mạng xã hội</h3>
+                        <p class="text-gray-600 mb-4">Theo dõi chúng tôi</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="#" class="w-10 h-10 bg-red-600 hover:bg-red-500 rounded-full flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-red-600 hover:bg-red-500 rounded-full flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-red-600 hover:bg-red-500 rounded-full flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="py-20 bg-gradient-to-r from-red-800 to-red-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl lg:text-5xl font-black text-white mb-8 tracking-wider">
+                    Đặt bàn ngay hôm nay
+                </h2>
+                <p class="text-xl lg:text-2xl text-gray-200 leading-relaxed mb-12">
+                    Trải nghiệm không gian cung đình Trung Hoa với trà đạo và trang phục cổ trang. 
+                    Đặt bàn ngay để đảm bảo có chỗ cho bạn và gia đình.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="tel:0909123456" class="bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-red-900 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-phone mr-2"></i>Gọi đặt bàn
+                    </a>
+                    <a href="https://wa.me/84909123456" target="_blank" class="border-2 border-white text-white hover:bg-white hover:text-red-900 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300">
+                        <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Include -->
+    <div id="footer-placeholder"></div>
+
+    <script src="include.js"></script>
+    <script src="script.js"></script>
+    <script src="cart-functions.js"></script>
+</body>
+</html>

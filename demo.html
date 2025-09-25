@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - Yuelight Tea</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-inter bg-gradient-to-br from-red-50 to-amber-50 min-h-screen p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold text-red-800 mb-8 text-center">🎭 Demo Yuelight Tea</h1>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Demo Products -->
+            <div class="bg-white rounded-2xl shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Sản phẩm demo</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg">
+                        <div>
+                            <h3 class="font-semibold">Long Jing Tea</h3>
+                            <p class="text-red-600 font-bold">89,000₫</p>
+                        </div>
+                        <button onclick="addToCart(this)" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-300">
+                            Thêm vào giỏ
+                        </button>
+                    </div>
+                    
+                    <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg">
+                        <div>
+                            <h3 class="font-semibold">Latte Art Hoa Mai</h3>
+                            <p class="text-red-600 font-bold">89,000₫</p>
+                        </div>
+                        <button onclick="addToCart(this)" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-300">
+                            Thêm vào giỏ
+                        </button>
+                    </div>
+                    
+                    <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg">
+                        <div>
+                            <h3 class="font-semibold">Combo Cung Nữ</h3>
+                            <p class="text-red-600 font-bold">299,000₫</p>
+                        </div>
+                        <button onclick="addToCart(this)" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-300">
+                            Thêm vào giỏ
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Demo Functions -->
+            <div class="bg-white rounded-2xl shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Chức năng demo</h2>
+                <div class="space-y-4">
+                    <button onclick="demoLogin()" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg font-semibold transition-colors duration-300">
+                        <i class="fas fa-user mr-2"></i>Demo đăng nhập
+                    </button>
+                    
+                    <button onclick="demoBooking()" class="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-semibold transition-colors duration-300">
+                        <i class="fas fa-calendar mr-2"></i>Demo đặt chỗ
+                    </button>
+                    
+                    <button onclick="demoCheckout()" class="w-full bg-purple-500 hover:bg-purple-600 text-white py-3 rounded-lg font-semibold transition-colors duration-300">
+                        <i class="fas fa-credit-card mr-2"></i>Demo thanh toán
+                    </button>
+                    
+                    <button onclick="demoContact()" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-3 rounded-lg font-semibold transition-colors duration-300">
+                        <i class="fas fa-envelope mr-2"></i>Demo liên hệ
+                    </button>
+                    
+                    <button onclick="clearAllData()" class="w-full bg-red-500 hover:bg-red-600 text-white py-3 rounded-lg font-semibold transition-colors duration-300">
+                        <i class="fas fa-trash mr-2"></i>Xóa dữ liệu demo
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Status Display -->
+        <div class="mt-8 bg-white rounded-2xl shadow-lg p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Trạng thái hệ thống</h2>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <i class="fas fa-user text-blue-600 text-xl"></i>
+                    </div>
+                    <p class="font-semibold">Đăng nhập</p>
+                    <p id="login-status" class="text-sm text-gray-600">Chưa đăng nhập</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <i class="fas fa-shopping-cart text-green-600 text-xl"></i>
+                    </div>
+                    <p class="font-semibold">Giỏ hàng</p>
+                    <p id="cart-status" class="text-sm text-gray-600">0 sản phẩm</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <i class="fas fa-calendar text-purple-600 text-xl"></i>
+                    </div>
+                    <p class="font-semibold">Đặt chỗ</p>
+                    <p id="booking-status" class="text-sm text-gray-600">0 đặt chỗ</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <div class="mt-8 text-center">
+            <a href="index.html" class="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 mr-4">
+                <i class="fas fa-home mr-2"></i>Về trang chủ
+            </a>
+            <a href="cart.html" class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+                <i class="fas fa-shopping-cart mr-2"></i>Xem giỏ hàng
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="cart-functions.js"></script>
+    <script>
+        // Demo functions
+        function demoLogin() {
+            const demoUser = {
+                id: Date.now(),
+                name: 'Nguyễn Văn Demo',
+                email: 'demo@yuelighttea.com',
+                phone: '0909.123.456',
+                joinDate: new Date().toISOString()
+            };
+            
+            currentUser = demoUser;
+            isLoggedIn = true;
+            localStorage.setItem('yuelight_logged_in', 'true');
+            localStorage.setItem('yuelight_user', JSON.stringify(currentUser));
+            
+            showNotification('Demo đăng nhập thành công! Chào mừng ' + demoUser.name + '! 🍵', 'success');
+            updateStatus();
+        }
+        
+        function demoBooking() {
+            if (!isLoggedIn) {
+                showNotification('Vui lòng đăng nhập trước!', 'error');
+                return;
+            }
+            
+            const bookingData = {
+                id: Date.now(),
+                date: new Date().toISOString().split('T')[0],
+                time: '14:00',
+                guests: '2',
+                area: 'normal',
+                specialRequests: 'Demo booking',
+                status: 'confirmed',
+                createdAt: new Date().toISOString()
+            };
+            
+            userBookings.push(bookingData);
+            localStorage.setItem('yuelight_bookings', JSON.stringify(userBookings));
+            
+            showNotification('Demo đặt chỗ thành công! Mã đặt chỗ: #' + bookingData.id, 'success');
+            updateStatus();
+        }
+        
+        function demoCheckout() {
+            if (cartItems.length === 0) {
+                showNotification('Giỏ hàng trống! Vui lòng thêm sản phẩm.', 'error');
+                return;
+            }
+            
+            if (!isLoggedIn) {
+                showNotification('Vui lòng đăng nhập trước!', 'error');
+                return;
+            }
+            
+            const orderId = 'YL' + Date.now();
+            const total = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            cartItems = [];
+            localStorage.setItem('yuelight_cart', JSON.stringify(cartItems));
+            
+            showNotification(`Demo thanh toán thành công! Mã đơn hàng: ${orderId} - Tổng: ${total.toLocaleString()}₫`, 'success');
+            updateStatus();
+        }
+        
+        function demoContact() {
+            showNotification('Demo gửi liên hệ thành công! Chúng tôi sẽ phản hồi trong 24h. 📧', 'success');
+        }
+        
+        function clearAllData() {
+            localStorage.removeItem('yuelight_cart');
+            localStorage.removeItem('yuelight_bookings');
+            localStorage.removeItem('yuelight_logged_in');
+            localStorage.removeItem('yuelight_user');
+            
+            currentUser = null;
+            isLoggedIn = false;
+            cartItems = [];
+            userBookings = [];
+            
+            showNotification('Đã xóa tất cả dữ liệu demo!', 'info');
+            updateStatus();
+        }
+        
+        function updateStatus() {
+            // Update login status
+            const loginStatus = document.getElementById('login-status');
+            if (isLoggedIn && currentUser) {
+                loginStatus.textContent = 'Đã đăng nhập: ' + currentUser.name;
+                loginStatus.className = 'text-sm text-green-600';
+            } else {
+                loginStatus.textContent = 'Chưa đăng nhập';
+                loginStatus.className = 'text-sm text-gray-600';
+            }
+            
+            // Update cart status
+            const cartStatus = document.getElementById('cart-status');
+            const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+            cartStatus.textContent = totalItems + ' sản phẩm';
+            if (totalItems > 0) {
+                cartStatus.className = 'text-sm text-green-600';
+            } else {
+                cartStatus.className = 'text-sm text-gray-600';
+            }
+            
+            // Update booking status
+            const bookingStatus = document.getElementById('booking-status');
+            bookingStatus.textContent = userBookings.length + ' đặt chỗ';
+            if (userBookings.length > 0) {
+                bookingStatus.className = 'text-sm text-green-600';
+            } else {
+                bookingStatus.className = 'text-sm text-gray-600';
+            }
+        }
+        
+        // Initialize status on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateStatus();
+        });
+    </script>
+</body>
+</html>
