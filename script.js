@@ -563,8 +563,8 @@ function showLoadingScreen() {
     loadingScreen.className = 'fixed inset-0 bg-red-800 flex items-center justify-center z-50 transition-opacity duration-500';
     loadingScreen.innerHTML = `
         <div class="text-center">
-            <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4 animate-spin">
-                <i class="fas fa-leaf text-2xl text-red-800"></i>
+            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 animate-spin p-2">
+                <img src="logo.png" alt="Yuelight Tea Logo" class="w-full h-full object-contain border-0.5 border-white border-opacity-20 rounded-full">
             </div>
             <h2 class="text-2xl font-bold text-white mb-2">Yuelight Tea</h2>
             <p class="text-gray-300">Đang tải...</p>

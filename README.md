@@ -138,7 +138,7 @@ web/
 ## 📞 Thông tin liên hệ
 
 - **Địa chỉ**: 334/33 Nguyễn Văn Linh, Quận 7, TP.HCM
-- **Giờ mở cửa**: 07:00 - 21:00 (Hàng ngày)
+- **Giờ mở cửa**: 08:00 - 22:30 (Hàng ngày)
 - **Hotline**: 0909.123.456
 - **Email**: yuelighttea@gmail.com
 
